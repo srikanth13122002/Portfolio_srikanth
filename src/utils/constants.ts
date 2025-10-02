@@ -89,7 +89,7 @@ export const EDUCATION: Education = {
   location: 'Puducherry',
   startYear: 2020,
   endYear: 2024,
-  gpa: 7.7,
+ 
   
 };
 
