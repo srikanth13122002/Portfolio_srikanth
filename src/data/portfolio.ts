@@ -5,7 +5,8 @@ export const CONTACT_INFO: ContactInfo = {
   phone: '+91 7448575334',
   location: 'Puducherry, India',
   linkedin: 'https://www.linkedin.com/in/srikanth13gk',
-  github: 'https://github.com/srikanth13gk',
+  github: 'https://github.com/srikanth13122002',
+  portfolio: 'https://portfolio-srikanth-eta.vercel.app',
 };
 
 export const PROFESSIONAL_SUMMARY =
@@ -151,6 +152,49 @@ export const PROJECTS: Project[] = [
     videoUrl: 'https://screenapp.io/app/#/shared/-YvO2BWQB6',
     featured: true,
   },
+  {
+    id: 'shopverse',
+    title: 'ShopVerse',
+    subtitle: 'Full-Stack Ecommerce Platform',
+    description:
+      'Modern ecommerce storefront with admin dashboard, JWT authentication, Stripe checkout, and a NestJS REST API backed by PostgreSQL and Prisma.',
+    highlights: [
+      'React 19 storefront with TanStack Query, Zustand, and React Hook Form + Zod validation',
+      'NestJS backend with JWT refresh tokens, Swagger docs, and Stripe webhooks',
+      'Admin dashboard for products, orders, categories, and user management',
+    ],
+    technologies: [
+      'React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'NestJS', 'PostgreSQL',
+      'Prisma', 'Stripe', 'JWT', 'TanStack Query', 'Zustand',
+    ],
+    githubRepos: [
+      {
+        label: 'Frontend',
+        url: 'https://github.com/srikanth13122002/Ecommerce-frontend',
+      },
+      {
+        label: 'Backend',
+        url: 'https://github.com/srikanth13122002/Ecommerce-Backend',
+      },
+    ],
+    featured: true,
+  },
+  {
+    id: 'portfolio',
+    title: 'Personal Portfolio',
+    subtitle: 'Developer Portfolio Website',
+    description:
+      'Interactive personal portfolio built with React, TypeScript, and Tailwind CSS featuring dark/light theme, WebGL shader backgrounds, and scroll animations.',
+    highlights: [
+      'WebGL shader backgrounds with Three.js and animated UI components',
+      'Professional folder structure with reusable sections and theme context',
+      'Deployed on Vercel with responsive design across all devices',
+    ],
+    technologies: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'Three.js', 'Lucide Icons'],
+    githubUrl: 'https://github.com/srikanth13122002/Portfolio_srikanth',
+    liveUrl: 'https://portfolio-srikanth-eta.vercel.app',
+    featured: true,
+  },
 ];
 
 export const EXPERIENCES: Experience[] = [
@@ -198,7 +242,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const HERO_STATS = [
   { label: 'Years Experience', value: 2.2, suffix: '+', decimals: 1, icon: 'clock' as const },
-  { label: 'Projects Delivered', value: 4, suffix: '+', icon: 'rocket' as const },
+  { label: 'Projects Delivered', value: 6, suffix: '+', icon: 'rocket' as const },
   { label: 'Tech Stack', value: 30, suffix: '+', icon: 'layers' as const },
 ];
 

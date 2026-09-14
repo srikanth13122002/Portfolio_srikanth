@@ -93,6 +93,29 @@ const Projects: React.FC = () => {
                         </svg>
                       </a>
                     )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-ripple inline-flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] px-4 py-2 text-sm font-medium text-[var(--color-text-secondary)] transition-all duration-300 hover:-translate-y-0.5 hover:border-gray-500/50 hover:text-[var(--color-text-primary)]"
+                      >
+                        <AppIcon name="github" size={16} />
+                        GitHub
+                      </a>
+                    )}
+                    {project.githubRepos?.map((repo) => (
+                      <a
+                        key={repo.url}
+                        href={repo.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-ripple inline-flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] px-4 py-2 text-sm font-medium text-[var(--color-text-secondary)] transition-all duration-300 hover:-translate-y-0.5 hover:border-gray-500/50 hover:text-[var(--color-text-primary)]"
+                      >
+                        <AppIcon name="github" size={16} />
+                        {repo.label}
+                      </a>
+                    ))}
                     {project.videoUrl && (
                       <a
                         href={project.videoUrl}

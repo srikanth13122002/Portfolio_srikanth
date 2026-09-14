@@ -26,6 +26,7 @@ const Contact: React.FC = () => {
             {([
               { href: `mailto:${CONTACT_INFO.email}`, label: 'Email Me', icon: 'mail' as IconName },
               { href: CONTACT_INFO.linkedin, label: 'LinkedIn', icon: 'linkedin' as IconName, external: true },
+              { href: CONTACT_INFO.github!, label: 'GitHub', icon: 'github' as IconName, external: true },
               { href: `tel:${CONTACT_INFO.phone}`, label: 'Call Me', icon: 'phone' as IconName },
             ]).map((link, index) => (
               <StaggerItem key={link.label} index={index} variant="up" staggerDelay={120}>

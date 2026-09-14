@@ -20,6 +20,11 @@ export interface SkillGroup {
   skills: string[];
 }
 
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -28,6 +33,7 @@ export interface Project {
   highlights: string[];
   technologies: string[];
   githubUrl?: string;
+  githubRepos?: ProjectLink[];
   liveUrl?: string;
   videoUrl?: string;
   featured: boolean;

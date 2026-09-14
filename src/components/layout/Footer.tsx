@@ -26,6 +26,16 @@ const Footer: React.FC = () => {
               GitHub
             </a>
           )}
+          {CONTACT_INFO.portfolio && (
+            <a
+              href={CONTACT_INFO.portfolio}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--color-text-muted)] transition-colors hover:text-blue-500"
+            >
+              Live Portfolio
+            </a>
+          )}
           <a
             href={`mailto:${CONTACT_INFO.email}`}
             className="text-[var(--color-text-muted)] transition-colors hover:text-blue-500"

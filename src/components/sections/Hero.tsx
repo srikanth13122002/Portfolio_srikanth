@@ -40,6 +40,14 @@ const CONTACT_LINKS: Array<{
     color: 'from-indigo-500 to-indigo-600',
     external: true,
   },
+  {
+    href: CONTACT_INFO.github!,
+    label: 'GitHub',
+    short: 'GitHub',
+    icon: 'github',
+    color: 'from-gray-700 to-gray-900',
+    external: true,
+  },
 ];
 
 const Hero: React.FC = () => {
