@@ -1,4 +1,7 @@
 import React from 'react';
+import { ThemeProvider } from './context/ThemeProvider';
+import ScrollProgress from './components/common/ScrollProgress';
+import ParticleBackground from './components/common/ParticleBackground';
 import {
   Navigation,
   Hero,
@@ -8,26 +11,30 @@ import {
   Projects,
   Education,
   Contact,
-  Footer
+  Footer,
 } from './components';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <Navigation />
-      <Hero />
-      
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 space-y-16 sm:space-y-20">
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Education />
-        <Contact />
-      </main>
-      
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-[var(--color-surface-muted)] transition-colors duration-500">
+        <ScrollProgress />
+        <ParticleBackground />
+        <Navigation />
+        <Hero />
+
+        <main className="mx-auto max-w-7xl space-y-16 px-4 sm:space-y-20 sm:px-6">
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Education />
+          <Contact />
+        </main>
+
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 

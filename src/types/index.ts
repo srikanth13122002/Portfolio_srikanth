@@ -1,18 +1,35 @@
+export type SkillCategory =
+  | 'frontend'
+  | 'backend'
+  | 'database'
+  | 'cloud'
+  | 'messaging'
+  | 'auth'
+  | 'tools'
+  | 'ai'
+  | 'engineering';
+
 export interface Skill {
   name: string;
-  category: 'frontend' | 'backend' | 'database' | 'other';
-  level: 'beginner' | 'intermediate' | 'advanced';
+  category: SkillCategory;
+}
+
+export interface SkillGroup {
+  category: SkillCategory;
+  title: string;
+  skills: string[];
 }
 
 export interface Project {
   id: string;
   title: string;
+  subtitle?: string;
   description: string;
+  highlights: string[];
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
   videoUrl?: string;
-  imageUrl?: string;
   featured: boolean;
 }
 
@@ -34,7 +51,6 @@ export interface Education {
   startYear: number;
   endYear: number;
   gpa?: number;
-  achievements?: string[];
 }
 
 export interface ContactInfo {
@@ -43,18 +59,13 @@ export interface ContactInfo {
   location: string;
   linkedin: string;
   github?: string;
-  website?: string;
+  portfolio?: string;
 }
 
 export interface NavItem {
   id: string;
   label: string;
   href: string;
-  active?: boolean;
 }
 
-export interface AnimationConfig {
-  duration: number;
-  delay: number;
-  easing: string;
-}
+export type Theme = 'light' | 'dark';
